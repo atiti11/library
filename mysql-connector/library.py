@@ -2,7 +2,7 @@ import mysql.connector
 from datetime import date
 
 DB_NAME = "library_2"
-
+PASSWORD = "1111"
 # --- Databázové funkce ---
 def create_database_if_not_exists(cursor, db_name):
     cursor.execute(
@@ -79,7 +79,7 @@ def connect_to_db():
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="1111"
+            password=PASSWORD
         )
         cursor = conn.cursor()
         database_already_existed = create_database_if_not_exists(cursor, DB_NAME)
@@ -89,7 +89,7 @@ def connect_to_db():
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="1111",
+            password=PASSWORD,
             database=DB_NAME
         )
         create_tables_if_not_exist(conn)
