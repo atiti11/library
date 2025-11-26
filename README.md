@@ -1,30 +1,26 @@
 # 📚 Knihovní systém v Pythonu + MySQL
 
-Tento projekt je jednoduchý konzolový systém pro správu knihovny pomocí jazyka **Python** a databáze **MySQL**. Umožňuje:
+Tento projekt je jednoduchý konzolový systém pro správu knihovny pomocí jazyka **Python** a databáze **MySQL**. Výsledny software (`library_solution.py`) Umožňuje:
 
 - registraci a identifikaci členů,
 - výpůjčku a vrácení knih,
 - zobrazení dostupných knih a aktuálně vypůjčených knih.
 
+> ! POZOR: při prvním spuštění databáze neobsahuje žádné uživatele ani knihy - je potřeba je doplnit ručně přes MySQL WorkBench.
+
 ## 🔧 Požadavky
 
 - Python 3.7+
 - Knihovna pro připojení k mysql serveru (jedna z násleudjících):
-    - [`mysql-connector-python`](https://pypi.org/project/mysql-connector-python/)
-    - [`PyMySQL`](https://pypi.org/project/PyMySQL/)
+  - [`mysql-connector-python`](https://pypi.org/project/mysql-connector-python/)
 - MySQL server (např. MariaDB nebo MySQL Community Server)
 
 Nainstaluj potřebné balíčky:
+
 ```bash
 pip install mysql-connector-python
 ```
-nebo:
-```bash
-pip install PyMySQL
-```
-## Různé knihovny
-Ve složce `/mysql-connector` najdeš impolemntaci systému používající knihovnu `mysql-connector-python` (oficiální knihovna).
 
-Ve složce `/pymysql` najdeš implementaci systému používající knihovnu `PyMySQL`.
+## Úkoly v kódu
 
-Zbytek věcí funguje stejně v obou implementacích.
+Soubor `library.py` obsahuje několik komentářů označený jako "TODO". Tyto komentáře pospiují, co je potřeba v projektu doplnit, aby fungoval (jedná se o věci spojené s databází). Soubor `library_solution.py` obsahuje, jak by měl vypadat výsledek. Složka `/mysql_examples/` obsahuje příklady použití knihovny mysql.
